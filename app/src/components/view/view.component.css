@@ -1,0 +1,48 @@
+section#view {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	background-color: lemonchiffon;
+	border: 5px solid transparent;
+	border-radius: 50px;
+	box-sizing: border-box;
+}
+table {
+	margin: 0 auto;	
+}
+td, th {
+	border : 1px solid black;
+	white-space: nowrap;
+	text-align: center;
+	padding: 5px;
+}
+th {
+	font : bold 14px arial;
+	color: orangered;
+}
+td {
+	font : bold 14px arial;
+	color: chocolate;
+}
+/*section#update {
+	display: none;
+	position: absolute;
+}*/
+section#view input[type="text"],input[type="number"] {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	margin: 0 auto;
+}
+section#view label{
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+	font: bold 16px arial;
+}
+section#update {
+	width: 90%;
+	padding: 10px;
+	margin: 20px auto;
+	border: 1px solid black;
+}
