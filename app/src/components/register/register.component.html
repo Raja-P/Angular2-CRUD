@@ -1,0 +1,72 @@
+<navig></navig>
+<section id="register"> 
+	<h2 style="text-align: center">Employee Registration Form</h2>
+	<h4>All Fields are Mandatory***</h4>
+ <form [formGroup]="registerForm" novalidate>
+ 	 <div class="form-group">
+		<label for="empid" >Employee Id :</label>
+		<input class="mdl-textfield__input form-control" type="number" formControlName="empid" (blur)="field=true" (focus)="field=false">
+		<span class="condition" *ngIf="registerForm.controls.empid.pristine">6 Digits</span>
+		<!-- <span class="error" *ngIf="!registerForm.controls.empid.pristine && registerForm.controls.empid.touched && registerForm.controls.empid.errors">Invalid/Empty Field</span> -->
+		<span class="error" *ngIf="!registerForm.controls.empid.pristine && registerForm.controls.empid.touched && registerForm.controls.empid.errors && field">Invalid/Empty Field</span>
+		{{registerForm.controls.empid}}
+	</div>
+	<div class="form-group">
+		<label for="empname" >Employee Name :</label>
+		<input class="mdl-textfield__input form-control" type="text" formControlName="empname">
+		<span class="condition" *ngIf="registerForm.controls.empname.pristine">Only Alphabets</span>
+		<span class="error" *ngIf="!registerForm.controls.empname.pristine && registerForm.controls.empname.errors">Invalid/Empty Field</span>
+	</div>
+	
+	<div class="form-group">
+		<label for="phone" >Mobile Number :</label>
+		<input class="mdl-textfield__input form-control" type="number" formControlName="phone">
+		<span class="condition" *ngIf="registerForm.controls.phone.pristine">10 Digits</span>
+		<span class="error" *ngIf="!registerForm.controls.phone.pristine && registerForm.controls.phone.errors">Invalid/Empty Field</span>
+	</div>
+	<div class="form-group">
+		<label for="email" >Mail Id :</label>
+		<input class="mdl-textfield__input form-control" formControlName="email" type="text">
+		<span class="condition" *ngIf="registerForm.controls.email.pristine">name@domain.*</span>
+		<span class="error" *ngIf="!registerForm.controls.email.pristine && registerForm.controls.email.errors">Invalid/Empty Field</span>
+	</div>
+	<div class="form-group">
+		<label for="designation">Designation :</label>
+		<select formControlName="designation">
+			<option>PAT</option>
+			<option>PA</option>
+			<option>Associate</option>
+		</select>
+		<span class="condition" *ngIf="registerForm.controls.designation.pristine">Choose any one</span>
+		<span class="error" *ngIf="!registerForm.controls.designation.pristine && registerForm.controls.designation.errors">Invalid/Empty Field</span>
+	</div>
+	<div class="form-group">
+		<label for="location">Location :</label>
+		<input type="radio" value="on" formControlName="location" id="on"><label for="on" class="lab">On Shore</label>
+		<input type="radio" value="off" formControlName="location" id="off"><label for="off" class="lab">Off Shore</label>
+		<span class="condition" *ngIf="registerForm.controls.location.pristine">Your work location</span>
+		<span class="error" *ngIf="!registerForm.controls.location.pristine && registerForm.controls.location.errors">Invalid/Empty Field</span>
+	</div>
+	<div class="form-group">
+		<label for="address">Address :</label>
+		<input class="mdl-textfield__input form-control" formControlName="address" type="text" rows="8" cols="30">
+		<span class="error" *ngIf="!registerForm.controls.address.pristine && registerForm.controls.address.errors">Invalid/Empty Field</span>
+	</div>
+	<div class="form-group">
+		<label for="experience">Experience :</label>
+		<input class="mdl-textfield__input form-control" formControlName="experience" type="number">
+		<span class="error" *ngIf="!registerForm.controls.experience.pristine && registerForm.controls.experience.errors">Invalid/Empty Field</span>
+	</div>
+	<div class="form-group" formGroupName="skill">
+		<label for="skill">Skills :</label>
+		<label *ngFor='let skills of skillList' class="lab">
+		<input type="checkbox" formControlName="{{skills}}">{{skills}}
+		</label>
+		<span class="condition" *ngIf="registerForm.controls.location.pristine">Atleast 1 Skill</span>
+		<span class="error" *ngIf="!registerForm.controls.experience.pristine && registerForm.controls.experience.errors">Unchecked</span>
+		
+	</div>
+	<button [disabled]="registerForm.invalid" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent btn btn-default" type="button" (click)=register(registerForm.value)>Submit</button>
+ </form>
+</section>
+

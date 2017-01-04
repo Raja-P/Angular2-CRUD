@@ -1,0 +1,46 @@
+section#register {
+	width: 1080px;
+	margin: 0 auto;
+	background-color: lemonchiffon;
+	border: 5px solid transparent;
+	border-radius: 50px; 
+	box-sizing: border-box;
+}
+section#register form {
+	width: 65%;
+	margin: 0 auto;
+}
+form button {
+	margin: 10px 45%;
+}
+
+section#register input[type="text"],input[type="number"] {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	margin: 0 auto;
+	font: bold 16px arial;
+}
+h2 {
+	color: #3e57f9;
+}
+
+div.form-group{
+	padding: 5px;
+}
+section#register label{
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+	font: bold 16px arial;
+}
+span.condition {
+	color: darkgreen;
+	font-weight: bold;
+}
+span.error {	
+	color: red;
+}
+label.lab {
+	width: initial !important;
+}
