@@ -1,0 +1,25 @@
+section#login {
+	width: 1080px;
+	margin: 5% auto;
+	text-align: center;
+	background-color: lemonchiffon;
+	border: 5px solid transparent;
+	border-radius: 50px;
+	box-sizing: border-box;
+
+}
+section#login h1 {
+	font: bold 30px arial;
+	color: green;
+}
+section#login input {
+	text-align: center;
+	width: 30%;
+	margin: 0 auto;
+}
+section#login img {
+	border: 5px solid red;
+}
+small {
+	color: red;
+}
