@@ -1,0 +1,7 @@
+body {
+	background-color: navy;
+}
+my-app {
+	width: 100%;
+	background: radial-gradient(red, yellow);
+}
