@@ -1,0 +1,35 @@
+section#navig {
+	width: 1080px;
+	margin: 0 auto;
+	padding: 30px 40px;
+	text-align: center;
+	background-color: lemonchiffon;
+	border: 5px solid transparent;
+	border-radius: 50px; 
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+	display: inline-block;
+	padding: 10px;
+	background-color: lightpink;
+	border-radius: 10px;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: red;
+	font: bold 20px arial;
+	color: red;
+}
+
+.user{
+	color:#4271f4;
+	font-weight: bold;
+	float: left;
+	font-size: 22px;
+}
+.signout
+{
+	float: right;
+}

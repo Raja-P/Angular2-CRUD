@@ -1,0 +1,11 @@
+<section id="navig">
+<nav>
+	<span class="user">Welcome {{user|uppercase}}</span>
+	
+		<li><a routerLink="/register" class="mdl-navigation__link">Register</a></li>
+		<li><a routerLink="/view" class="mdl-navigation__link">View</a></li>
+	
+	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent btn btn-default signout" type="submit" (click)="signout()">Sign out</button>
+</nav>
+</section>
+<router-outlet></router-outlet>
